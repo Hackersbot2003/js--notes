@@ -16,4 +16,10 @@ console.log(hundereds.toLocaleString());            //100,000,000,000,000       
 console.log(hundereds.toLocaleString("en-In"));         //10,00,00,00,00,00,000
 
 
+//**********math*************************
+console.log(Math);
+console.log(Math.abs(-4));         //4
+console.log(Math.round(2.998));    //3
+console.log(Math.ceil(3.889));         //next high value   4
+console.log(Math.floor(3.99));            //low value    3
 
