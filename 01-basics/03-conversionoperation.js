@@ -52,28 +52,70 @@
             
 
 
-          //convert to boolean
-    let num=1
-    let num1="abh"
-    let num2=true
-    let num3=""
-    let num4=null 
-    let num5=undefined
-    console.table([Boolean(num),Boolean(num1),Boolean(num2),Boolean(num3),Boolean(num4),Boolean(num5)])
-    // ┌─────────┬────────┐
-    // │ (index) │ Values │
-    // ├─────────┼────────┤
-    // │ 0       │ true   │
-    // │ 1       │ true   │
-    // │ 2       │ true   │
-    // │ 3       │ false  │
-    // │ 4       │ false  │
-    // │ 5       │ false  │
-    // └─────────┴────────┘
+//           //convert to boolean
+//     let num=1
+//     let num1="abh"
+//     let num2=true
+//     let num3=""
+//     let num4=null 
+//     let num5=undefined
+//     console.table([Boolean(num),Boolean(num1),Boolean(num2),Boolean(num3),Boolean(num4),Boolean(num5)])
+//     // ┌─────────┬────────┐
+//     // │ (index) │ Values │
+//     // ├─────────┼────────┤
+//     // │ 0       │ true   │
+//     // │ 1       │ true   │
+//     // │ 2       │ true   │
+//     // │ 3       │ false  │
+//     // │ 4       │ false  │
+//     // │ 5       │ false  │
+//     // └─────────┴────────┘
 
 
-          //convert to string
+//           //convert to string
 
-          let str=3
-          console.log(typeof str)                         //number
-          console.log(typeof String(str))                    //string
+//           let str=3
+//           console.log(typeof str)                         //number
+//           console.log(typeof String(str))                    //string
+
+//  *********************operation*************************
+
+let value = 3
+let negValue=-value
+console.log(negValue)
+
+
+console.log(2+3)
+// + - *  % /  ** basi math operations
+let str ="hello"
+let str2 ="vinay"
+console.log(str + str2)         //concatenation
+
+
+console.log("1"+2)        //12
+
+console.log(1+"2")        //12
+console.log("1"+2+2)        //122
+console.log(1+2+"2")       //32
+console.log(1+"2" +3)      //123
+console.log(1+2+"2" +3)     //323   
+//dont write these types of code use parathesis
+console.log((3+3) ,"3")   //63
+
+
+//tricky conversion usseles
+console.log(+true)       //1
+console.log(+"")        //0
+//console.log(true+)      //error
+
+
+//donot write tthis type
+let num1 ,num2,num3
+num1=num2=num3=2+2               //in coading focus on readibiity
+
+let gameCounter=100     //100
+++gameCounter;
+console.log(gameCounter)   //101
+gameCounter1=gameCounter++;        //postfix
+console.log(gameCounter);    //102
+console.log(gameCounter1);   //101
