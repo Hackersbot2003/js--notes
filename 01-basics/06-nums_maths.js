@@ -23,3 +23,15 @@ console.log(Math.round(2.998));    //3
 console.log(Math.ceil(3.889));         //next high value   4
 console.log(Math.floor(3.99));            //low value    3
 
+console.log(Math.random());         //random value between 0 and 1
+console.log(Math.random()*10);     //between 0 and 10
+console.log(Math.floor(Math.random()*10));  //if value is 0.004 it returns 0 ,to avoid it
+console.log((Math.random()*10 )+1);    //min value is 1
+
+const min =10
+const max = 20
+ 
+//formula  (math.random()*(max-min+1)) +min
+console.log(Math.floor( (Math.random()*(max-min+1)))+min);                    //formula        learn it
+
+
