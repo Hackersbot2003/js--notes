@@ -82,7 +82,7 @@ function loginUserMessge(username){
 // undefined
 //----------predefined value ------------------
 function loginUserMessge(username ="vinay"){
-    if (username == undefined)
+    if (username == undefined)                        //if ke andar jayega hi nahi
         {
             console.log("enter username");
             return
@@ -104,9 +104,39 @@ function loginUserMessge(username ="vinay"){
  //sam has logged in
 
  //---------------------------------------------shooping cart-------------------
- function calculateCartPrice(...num1){
+ function calculateCartPrice(num1){
     return num1
  }
 
+ function calculateCartPrice(...num1){                   //rest operator =>packs all item in a bundle(array)
+   return num1                                   //[100,200,300,400]
+}
+
+function calculateCartPrice(val1,val2,...num1){                   //rest operator =>packs all item in a bundle(array)
+   return num1                                    //[300,400]
+}
+
  console.log(calculateCartPrice(100,200,300,400));
- 
+ //----------------------------------------------------------------------
+ //defining objects
+
+ const user ={
+   name:'vinay',
+   price:99
+ }
+
+ function handleObject(anyobject){
+   console.log(`username is ${anyobject.name} and the price is ${anyobject.price}`)
+ }
+ handleObject(user)                   //username is vinay and the price is 99
+ handleObject({name:"sam",
+   pric:100
+ })                                      //username is sam and the price is undefined
+ //check typesafety        ,easy in typescript
+ //------------------------------------define array-----------
+ const myArr =[200,300,400,500]
+ function handleArray(getArray){
+   return getArray[1]
+ }
+
+console.log( handleArray(myArr));                    //300
