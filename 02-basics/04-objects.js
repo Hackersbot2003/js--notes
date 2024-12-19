@@ -60,3 +60,46 @@ const users =[
  //always ask about value
  console.log(tinderUser.hasOwnProperty("isLoggedIn"));         //true 
  
+
+
+ //********destructuring */
+ const course ={
+    courseName:"js in hindi",
+    price:"333",
+    courseInstructuor:"hitesh"
+
+ }
+ //course.courseInstructuor
+ //if we want to extract mulltiple values
+
+ const {courseInstructuor} =course
+ console.log(courseInstructuor);                 //hitesh
+
+ //if we want to assign our own modified name
+ const {courseInstructuor:instructor} =course
+ console.log(instructor);                        //hitesh
+
+
+// in react we destructure
+// const navbar =({company}) =>{              //(props.company) == ({company})
+    
+// }
+// navbar(company="hitesh")
+
+
+//api gives value in form of json
+ //json data
+//  {
+//     "name":"vinay",
+//     "coursename":"js in hindi",
+//     "price":"100"
+//  }
+
+//api in form of array
+// [
+//     {},
+//     {},
+//     {}
+// ]
+
+//random user generator         //json formatter
