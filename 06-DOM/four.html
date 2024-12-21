@@ -32,7 +32,19 @@
 
 
    //edit
-   document.querySelector
+    const secondLang =  document.querySelector("li:nth-child(2)")
+    //secondlang.innerHTML="mojo"
+    const newLi = document.createElement("li")
+    newLi.textContent="mojo"
+    secondLang.replaceWith(newLi)
 
+    //edit
+    const firstlang= document.querySelector("li:first-child")
+      firstlang.outerHTML = '<li>typescript</>'
+    
+
+    //remov
+    const lastlang = document.querySelector("li:last-child")             //lifo order
+    lastlang.remove()
 </script>
 </html>
