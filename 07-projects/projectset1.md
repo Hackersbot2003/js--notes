@@ -83,4 +83,20 @@ form.addEventListener("submit",function(e){
  ```
 
 
- ### project 3
+ ## project 3 digital clock
+ ```javascript
+ const clock =document.getElementById("clock")
+//const clock=document.querySelector("#clock")
+
+
+
+setInterval(function(){
+  let date = new Date()
+  //console.log(date)
+  clock.innerHTML=date.toLocaleTimeString()
+},1000)
+
+//setInterval(function(){},1000)
+```
+
+## project 4 
