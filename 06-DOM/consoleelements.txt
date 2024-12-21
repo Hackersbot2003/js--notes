@@ -75,3 +75,53 @@ list.style.backgroundColor="yellow"
 'yellow'
 list.innerText ="vinay"
 'vinay'
+--------------------------------------NODE list
+/-----------querySelectorall
+document.querySelectorAll("li")
+NodeList(3) [li, li, li]
+const empList = document.querySelectorAll("li")
+undefined
+
+empList
+NodeList(3) [li, li, li]         //its a node list not an array
+nodelist contain foreach function but not a map function
+
+const empList = document.querySelectorAll("li")
+undefined
+empList
+NodeList(3) [li, li, li]
+empList.style.color ="red"
+VM295:1 Uncaught TypeError: Cannot set properties of undefined (setting 'color')
+    at <anonymous>:1:21
+(anonymous) @ VM295:1
+empList[0].style.color ="red"
+'red
+
+
+-------foreach
+onst empList = document.querySelectorAll("li")
+undefined
+empList.forEach(function (li) {
+    
+})
+undefined
+
+empList.forEach(function (li) {
+    li.style.backgroundColor ="red"
+})
+
+
+/////-converting nodelist to array then applying properties
+const clsnam = document.getElementsByClassName("list-item")
+undefined
+const clsnam.foreach(function(l){ console.log(l) })
+VM83:1 Uncaught SyntaxError: Missing initializer in const declaration
+const array =Array.from(clsnam)
+undefined
+
+const clsnam = document.getElementsByClassName("list-item")
+undefined
+const array =Array.from(clsnam)
+undefined
+array.forEach(function(l) {l.style.color = "red"})
+undefined
