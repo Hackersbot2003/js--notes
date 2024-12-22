@@ -7,11 +7,25 @@
 </head>
 <body>
     <h1>chaiaur code</h1>
-      <button class="button">click here</button>
+      <button id="button">click here</button>
 </body>
 <script>
     //setTimeout(function(){} , 1000)
     //or best way is to provide refrence
-    
+    const sayVinay = function(){
+        console.log("vinay");
+    }
+    const stoppvinay = setTimeout(sayVinay,2000)              //provided refrence
+    const changetext = function(){
+        document.querySelector("h1").innerHTML="heyy i made changes"
+    }
+    const stop = setTimeout(changetext ,5000)              //it runs after 5 sec
+    //stoping event
+    document.querySelector("#button").addEventListener("click",function(){
+        clearTimeout(stoppvinay)
+        console.log("stopped");
+        
+    },false)
+
 </script>
 </html>
