@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>chai aur code</h1>
+    <button id="start">start</button>
+    <button id="stop">stop</button>
+  </body>
+  <script>
+    // const saydate = function(str){
+    //     console.log(str,Date.now());
+
+    // }
+    //const stopdate = setInterval(saydate, 10000, "vinay");
+
+    const starrt = function (e) {
+      console.log(e, Date.now());
+    };
+    let forStop;                      //we will defin it in global scope so that we can use it in both start and stop scope
+
+    document
+    .querySelector("#start").addEventListener("click", function () {
+      console.log("hii");
+      forStop = setInterval(starrt, 2000, "tldr"); //3 parameters -functionReference,time,argument
+    });
+    document.querySelector("#stop").addEventListener("click", function () {
+      console.log("demand stop");
+      clearInterval(forStop); //setintervalka refrence dete hai
+    });
+
+    //settimeout- one time run
+    //setInterval runs upto when you are not applying clearinterval
+  </script>
+</html>

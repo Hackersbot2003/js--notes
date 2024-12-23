@@ -199,3 +199,59 @@ function newGame(){
    })
 }
 ```
+
+## project 5 keyboard event
+```javascript
+const insert  =document.getElementById("insert")
+window.addEventListener("keydown",(e)=>{
+  insert.innerHTML =`
+  <div class="color">
+  <table>
+  <tr>
+    <th>key</th>
+    <th>keycode</th>
+    <th>code</th>
+  </tr>
+  <tr>
+    <td>${e.key== ""?"space":e.key}</td>
+    <td>${e.keyCode}</td>
+    <td>${e.code}</td>
+  </tr>
+  
+</table>
+  
+  </div>
+  
+  
+  `
+})
+//3 keyboard event -keydown ,keypress,keyup
+```
+## project 6 unlimited colors
+```javascript
+//generating a random colour 
+const randomcolor = function(){
+  const hex="0123456789ABCDEF"
+  let color ="#"
+  for (i=0;i<6;i++){
+    color+=Math.floor(Math.random()*16)
+    
+
+  }
+  return color;
+}
+let intervalId;
+const startChangecolor = function(){
+ if(!intervalId){
+  intervalId= setInterval(changebgcolor ,1000)
+ }
+
+ function changebgcolor(){document.body.style.backgroundColor=randomcolor()}
+}
+const stopChangecolor = function(){
+  clearInterval(intervalId)
+  intervalId=null
+}
+document.querySelector("#start").addEventListener("click",startChangecolor)
+document.querySelector("#stop").addEventListener("click",stopChangecolor)
+```
