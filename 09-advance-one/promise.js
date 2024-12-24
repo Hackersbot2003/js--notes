@@ -130,3 +130,5 @@ fetch("https://api.github.com/users/hiteshchoudhary").then((response)=>{
 })
 //fetch makes priority task queue
 //fetch queue-microtask queue-prorityqueue
+
+//fetch onepart handles web api nad another part reserves memory
