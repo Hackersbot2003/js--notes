@@ -128,4 +128,5 @@ fetch("https://api.github.com/users/hiteshchoudhary").then((response)=>{
     console.log("error caused in fetch");
     
 })
-
+//fetch makes priority task queue
+//fetch queue-microtask queue-prorityqueue
