@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>closure</title>
+  </head>
+  <body>
+    <button id="green">green</button>
+    <button id="orange">orange</button>
+  </body>
+  <script>
+    function outer() {
+      let username = "vinay";
+      console.log(secret);
+
+      function inner() {
+        let secret = "vinay";
+        console.log("inner", username); //inner vinay
+      }
+      inner();
+      function inner2() {
+        console.log("inner2", username); //inner2 vinay
+        console.log(secret);
+      }
+      inner2();
+    }
+    outer();
+    console.log("too outer", username); //username is not defined
+    //lexical scope -> function ke andar function jo hota hai unn sabhi ko outer function ke variables ka access milta hai
+    //child did not share properties with other child as well as parents,but parents share properties with child
+
+    //closure me jo function return karte hai wo pura ke pura lexical scope hi return karta hai
+  </script>
+  <script>
+    // document.getElementById("orange").onclick = function () {
+    //   document.body.style.backgroundColor = "orange";
+    // };
+    // document.getElementById("green").onclick = function () {
+    //   document.body.style.backgroundColor = "green";
+    // };
+
+
+    function clickhandler(color){
+        //document.body.style.backgroundColor = `${color}`
+        //due to closure properties we have access of colour function here
+        return function(){
+            document.body.style.backgroundColor = `${color}`  //we have its access
+        }
+    }
+    document.getElementById("orange").onclick = clickhandler("orange")      //yaha par abb humko pura ke pura function return ho raha hai na ki  //document.body.style.backgroundColor = `${color}`,issme fir har color ke liye alag define karni padati
+    document.getElementById("green").onclick = clickhandler("green")
+  </script>
+</html>

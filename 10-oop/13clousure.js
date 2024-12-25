@@ -1,0 +1,20 @@
+//lexical scope
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//closure
