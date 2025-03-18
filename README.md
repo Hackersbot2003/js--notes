@@ -1,2 +1,2 @@
-# js-hindi-youtube
- js of chai and code
+# js--notes
+ js full notes
